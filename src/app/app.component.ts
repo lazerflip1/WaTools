@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,15 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'wa-tools';
 
-  phoneNumber:number;
-  phoneNumberRegEx = new RegExp ('^[0-9]');
-
-
+  phoneNumber: number;
+  countryCode: number = 34;
+  phoneNumberRegEx = new RegExp('^[0-9]{9}$');
 
   openWhatsapp(): void {
-
-    var result=this.phoneNumberRegEx.test(this.phoneNumber?.toString());
-    console.log(result);
-    window.open("https://api.whatsapp.com/send?phone="+this.phoneNumber, "_blank");
+    if (this.phoneNumberRegEx.test(this.phoneNumber?.toString())) {
+      window.open('https://api.whatsapp.com/send?phone=' + this.countryCode + this.phoneNumber, '_blank');
+    }
   }
 }
