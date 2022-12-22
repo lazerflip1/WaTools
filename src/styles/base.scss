@@ -5,3 +5,21 @@ body {
   height: 100%;
   font-family: Arimo;
 }
+
+.select {
+  @apply flex-shrink-0 inline-flex items-center py-2.5 px-4 rounded-lg text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:border-gray-600;
+  &.prefix {
+    @apply rounded-r-none rounded-l-lg;
+  }
+}
+
+.input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm font-medium rounded-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white outline-0;
+  &.sufix {
+    @apply rounded-l-none rounded-r-lg;
+  }
+}
+
+.button {
+  @apply bg-green-500 rounded-md text-white px-5 py-1.5 font-medium hover:bg-green-600;
+}

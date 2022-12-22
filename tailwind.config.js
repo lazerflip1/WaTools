@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
+      boxShadow: {
+        card: '0 4px 8px #00000029'
+      },
       colors: {
         'whatsapp-green': '#446C51'
       },

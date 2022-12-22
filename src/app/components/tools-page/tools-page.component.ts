@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { filter, take } from 'rxjs';
+import { CountriesList } from 'src/app/model';
 import { LocationService, phoneNumberObj, PhoneNumberService } from 'src/app/services';
 
 @Component({
@@ -11,7 +12,8 @@ export class ToolsPageComponent implements OnInit {
   waApi = 'https://api.whatsapp.com/send?phone=';
 
   phoneNumber: string;
-  countryCode: number = 34;
+  countryCode: number = CountriesList[0].code;
+  countriesList = CountriesList;
 
   constructor(private _locationSvc: LocationService, private _phoneNumberService: PhoneNumberService) {}
 
