@@ -40,8 +40,9 @@ export class ToolsPageComponent implements OnInit {
     const phoneObj: phoneNumberObj = this._phoneNumberService.getCodeAndNumber(clipboard);
     const countryCode = phoneObj.code ?? this.countryCode;
     const phoneNumber = phoneObj.phone;
+    //To do: Check if country code exists in our avaliable countries
     if (this._phoneNumberService.testCountryCode(+countryCode) && this._phoneNumberService.testPhoneNumber(phoneNumber)) {
-      this.openUrl(+countryCode, clipboard);
+      this.openUrl(+countryCode, phoneNumber);
     }
   }
 

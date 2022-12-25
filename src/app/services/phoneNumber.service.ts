@@ -11,8 +11,8 @@ export interface phoneNumberObj {
 export class PhoneNumberService {
   phoneNumberRegEx = new RegExp('^[0-9]{9}$');
   countryCodeRegEx = new RegExp('^[0-9]{2}$');
-  startsWithPlus = new RegExp('^[+]');
-  startsWithZero = new RegExp('^00');
+  startsWithPlus = new RegExp('^[+]?[0-9]{11}$');
+  startsWithZero = new RegExp('^[00]?[0-9]{13}$');
 
   constructor() {}
 
@@ -30,6 +30,7 @@ export class PhoneNumberService {
         code: null,
         phone: input
       };
+      //To do: PT has 3 digits, code we need to update this conditions
     } else if (this.startsWithPlus.test(input.toString())) {
       return {
         code: +input.slice(1, 3),

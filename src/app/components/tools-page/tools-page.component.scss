@@ -1,0 +1,14 @@
+.background::before {
+  content: '';
+  position: absolute;
+  background-image: url('./../../../assets/images/bg-default.png');
+  @apply opacity-[0.4] dark:opacity-[0.06];
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background {
+  position: relative;
+}

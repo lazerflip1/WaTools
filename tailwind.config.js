@@ -7,11 +7,12 @@ module.exports = {
         card: '0 4px 8px #00000029'
       },
       colors: {
-        'whatsapp-green': '#446C51'
+        'whatsapp-green': '#446C51',
+        dark: '#0B141A',
+        light: '#efeae2'
       },
       backgroundImage: {
-        default: "url('assets/images/bg-light.jpg')",
-        dark: "url('assets/images/bg-dark.jpg')"
+        default: "url('assets/images/bg-default.png')"
       }
     }
   },
